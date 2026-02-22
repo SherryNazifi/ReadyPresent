@@ -1,0 +1,49 @@
+/* Theme variables for animated eyes */
+:root {
+    --bg-color: #0a192f;
+    --eye-white: #f0f0f0;
+    --pupil: #111;
+    --accent: #64ffda;
+}
+
+/* Container holding both eyes */
+.eyes-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Eye shape */
+.eye {
+    width: 150px;
+    height: 150px;
+    background-color: var(--eye-white);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+/* Triggered when blinking animation is applied */
+.blinking {
+    animation: blink 0.15s ease-in-out;
+}
+
+/* Blink animation */
+@keyframes blink {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(0); }
+}
+
+/* Pupil inside each eye */
+.pupil {
+    width: 60px;
+    height: 60px;
+    background-color: var(--pupil);
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.05s ease-out;
+}

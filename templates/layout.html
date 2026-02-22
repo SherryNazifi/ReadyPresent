@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReadyPresent</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/eyesStyle.css" />
+</head>
+
+<body>
+
+  <!-- Preview Page -->
+  <section id="page-preview" class="page page-active">
+    <div class="preview-wrap">
+      <div class="preview-card">
+
+        <!-- Animated eyes -->
+        <div class="eyes-container">
+          <div class="eye"><div class="pupil"></div></div>
+          <div class="eye"><div class="pupil"></div></div>
+        </div>
+
+        <div class="preview-title">ReadyPresent</div>
+        <div class="preview-sub">
+          Your words matter. Your delivery matters more.
+        </div>
+
+        <button id="goAnalyzeBtn" class="btn start">Start Analyzing</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analyze Page -->
+  <section id="page-analyze" class="page">
+    <div class="app-container">
+
+      <!-- Webcam + Controls -->
+      <main class="video-section">
+        <div class="webcam-container">
+          <video id="webcam" autoplay playsinline muted></video>
+          <audio id="microphone" autoplay muted></audio>
+          <canvas id="captureCanvas" style="display:none;"></canvas>
+        </div>
+
+        <div class="controls-container">
+          <button id="startBtn" class="btn start">Start</button>
+          <button id="stopBtn" class="btn stop">Stop</button>
+          <div id="sessionStatus" class="session-status">
+            Not recording
+          </div>
+        </div>
+      </main>
+
+      <!-- Live Metrics Panel -->
+      <aside class="data-section">
+        <h2>Live Metrics</h2>
+
+        <div class="metrics-grid">
+
+          <div class="metric-card">
+            <span class="label">Live Confidence Score</span>
+            <span class="value" id="var-confidence">0%</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="label">Eye Score</span>
+            <span class="value" id="var-eye-score">0</span>
+          </div>
+
+          <div class="metric-card">
+            <span class="label">Speech WPM</span>
+            <span class="value" id="var-speechwpm">0 wpm</span>
+          </div>
+
+          <div class="metric-card big-meter">
+            <span class="label">Overall Confidence</span>
+            <div class="confidence-circle">
+              <span id="circle-score">0%</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <span class="label">Live Tip</span>
+            <span id="live-tip" class="value">Stay steady</span>
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Summary Page -->
+  <section id="page-summary" class="page">
+    <div class="summary-wrap">
+
+      <h1 class="summary-title">Session Summary</h1>
+
+      <div class="summary-grid">
+
+        <div class="summary-card">
+          <h3>Final Metrics</h3>
+          <p><b>Eye Score:</b> <span id="sum-eye">0</span></p>
+          <p><b>WPM:</b> <span id="sum-wpm">0</span></p>
+          <p><b>Fillers:</b> <span id="sum-fillers">0</span></p>
+          <p><b>Pauses:</b> <span id="sum-pauses">0</span></p>
+          <p><b>Confidence:</b> <span id="sum-confidence">0%</span></p>
+        </div>
+
+        <div class="summary-card">
+          <h3>Advice</h3>
+          <div id="sum-advice" class="advice-box">
+            Press “Stop” to generate advice.
+          </div>
+        </div>
+
+      </div>
+
+      <button id="restartBtn" class="btn start">Start Over</button>
+
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="/static/eyesScript.js"></script>
+  <script src="/static/webcam.js"></script>
+  <script src="/static/script.js"></script>
+
+</body>
+</html>

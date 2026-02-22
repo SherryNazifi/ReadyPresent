@@ -1,0 +1,13 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+
+# accidental nested repo
+sherrynazifi.github.io/
