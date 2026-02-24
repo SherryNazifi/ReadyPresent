@@ -84,11 +84,11 @@ Backend:
 
 - Python
 - FastAPI
+- Web Speech API
 - MediaPipe
 - OpenCV
 - NumPy
-- Vanilla JavaScript
-- Web Speech API
+- JavaScript
 - HTML / CSS
 
 ---
