@@ -121,8 +121,8 @@ Allow webcam and microphone access when prompted.
 
 ---
 
-## Author
+## Authors
 
-Shahrzad Nazifi
-Computer Science, UMass Amherst  
-Commonwealth Honors College
+Shahrzad Nazifi, Joanna Liu, Jeng-Aun Chou, Chloe Le
+
+UMass Amherst  
